@@ -175,7 +175,10 @@
         'https://vpnvvehzkgwqojjiryke.supabase.co/functions/v1/demo-request',
         {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZwbnZ2ZWh6a2d3cW9qamlyeWtlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzUyODU5NzIsImV4cCI6MjA5MDg2MTk3Mn0.m1CbhggIdC5RVAcoLT8Ge8V5kk_rWZMhXyTb9Q9dthg',
+          },
           body: JSON.stringify(data),
         }
       );
