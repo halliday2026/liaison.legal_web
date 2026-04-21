@@ -1,0 +1,71 @@
+---
+const problems = [
+  'Hundreds of unorganized screenshots with no verified timestamps',
+  'No read receipt documentation — "I never saw that" claims go unchallenged',
+  'Alterable evidence — no cryptographic integrity to prove nothing was changed',
+  'Hours of paralegal time per case sorting, organizing, and printing messages',
+];
+
+const solutions = [
+  'Every message cryptographically hashed and immutably logged from day one',
+  'Exact read receipts with timestamps — admissible, not arguable',
+  'SHA-256 hash chain makes any tampering cryptographically detectable',
+  'Attorney-side dashboard with pre-sorted, pre-verified chronological record',
+  'One-click PDF or CSV export formatted for court submission',
+];
+---
+
+<section class="bg-warm-white py-20 px-6">
+  <div class="max-w-6xl mx-auto">
+
+    <div class="text-center mb-12">
+      <p class="text-sm font-body font-medium text-sky uppercase tracking-widest mb-3">
+        The evidence problem
+      </p>
+      <h2 class="font-display font-bold text-3xl md:text-4xl text-navy">
+        What you deal with today — and what changes tomorrow
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+
+      <!-- Problem list -->
+      <div>
+        <h3 class="font-display font-semibold text-xl text-navy mb-6 flex items-center gap-2">
+          <span class="text-danger text-2xl">✕</span>
+          What your clients bring you today
+        </h3>
+        <ul class="space-y-4">
+          {problems.map((problem) => (
+            <li class="flex items-start gap-3 bg-white rounded-[var(--radius-md)] px-5 py-4" style="box-shadow: var(--shadow-card);">
+              <span class="text-danger font-bold mt-0.5 flex-shrink-0">✕</span>
+              <p class="font-body text-sm text-navy leading-relaxed">{problem}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Solution card -->
+      <div class="bg-navy rounded-[var(--radius-lg)] p-8" style="box-shadow: var(--shadow-card);">
+        <h3 class="font-display font-semibold text-xl text-white mb-6">
+          What if the evidence was already ready when they called?
+        </h3>
+        <ul class="space-y-4">
+          {solutions.map((solution) => (
+            <li class="flex items-start gap-3">
+              <span class="text-check font-bold mt-0.5 flex-shrink-0 text-lg">✓</span>
+              <p class="font-body text-sm leading-relaxed" style="color: var(--color-text-light);">{solution}</p>
+            </li>
+          ))}
+        </ul>
+        <a
+          href="#demo-form"
+          class="mt-8 inline-flex items-center px-6 py-3 rounded-full bg-gold text-navy font-body font-semibold text-sm hover:brightness-105 transition-all duration-200"
+        >
+          See how it works →
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>

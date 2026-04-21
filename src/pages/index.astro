@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/layout/Nav.astro';
+import Footer from '../components/layout/Footer.astro';
+import Hero from '../components/home/Hero.astro';
+import Features from '../components/home/Features.astro';
+import CompareTable from '../components/home/CompareTable.astro';
+import CtaBanner from '../components/home/CtaBanner.astro';
+---
+
+<BaseLayout
+  title="Liaison.legal — Court-Admissible Co-Parenting Communication, Free for Parents"
+  description="Secure, timestamped co-parenting messaging with SHA-256 hashing and read receipts. Court-admissible by design. Free forever for parents."
+>
+  <Nav variant="light" />
+  <main>
+    <Hero />
+    <Features />
+    <CompareTable />
+    <CtaBanner />
+  </main>
+  <Footer />
+</BaseLayout>

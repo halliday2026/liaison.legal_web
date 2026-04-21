@@ -1,0 +1,70 @@
+---
+interface Props {
+  variant: 'light' | 'dark';
+}
+
+const { variant } = Astro.props;
+const isLight = variant === 'light';
+---
+
+<nav
+  class={`w-full px-6 py-4 ${isLight ? 'bg-warm-white border-b border-cream' : 'bg-navy'}`}
+>
+  <div class="max-w-6xl mx-auto flex items-center justify-between gap-4">
+    <!-- Logo -->
+    <a
+      href={isLight ? '/' : '/'}
+      class={`font-display font-bold text-xl tracking-tight ${isLight ? 'text-navy' : 'text-white'}`}
+    >
+      Liaison<span class={isLight ? 'text-sky' : 'text-gold'}>.legal</span>
+    </a>
+
+    <!-- Center / secondary link -->
+    {isLight ? (
+      <a
+        href="/firms"
+        class="hidden sm:inline-flex items-center gap-1 text-sm font-body px-3 py-1.5 rounded-full bg-sky-light text-steel hover:bg-sky hover:text-white transition-colors duration-200"
+      >
+        Are you a law firm? <span aria-hidden="true">→</span>
+      </a>
+    ) : (
+      <a
+        href="/"
+        class="hidden sm:inline-flex items-center gap-1 text-sm font-body text-white/70 hover:text-white transition-colors duration-200"
+      >
+        <span aria-hidden="true">←</span> Back to main site
+      </a>
+    )}
+
+    <!-- Primary CTA -->
+    {isLight ? (
+      <a
+        href="https://app.liaison.legal/signup"
+        class="inline-flex items-center px-4 py-2 rounded-full bg-navy text-white text-sm font-body font-medium hover:bg-navy-mid transition-colors duration-200"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Start Free Account
+      </a>
+    ) : (
+      <a
+        href="#demo-form"
+        class="inline-flex items-center px-4 py-2 rounded-full bg-gold text-navy text-sm font-body font-semibold hover:brightness-105 transition-all duration-200"
+      >
+        Schedule Walk-Through
+      </a>
+    )}
+  </div>
+
+  <!-- Mobile: show firm link below on small screens (light only) -->
+  {isLight && (
+    <div class="sm:hidden mt-2 flex justify-center">
+      <a
+        href="/firms"
+        class="inline-flex items-center gap-1 text-sm font-body px-3 py-1.5 rounded-full bg-sky-light text-steel"
+      >
+        Are you a law firm? →
+      </a>
+    </div>
+  )}
+</nav>

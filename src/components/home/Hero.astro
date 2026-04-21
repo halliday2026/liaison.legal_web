@@ -1,0 +1,145 @@
+---
+---
+
+<section class="bg-warm-white py-16 md:py-24 px-6">
+  <div class="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+
+    <!-- Copy column -->
+    <div class="flex-1 text-center lg:text-left">
+      <!-- Eyebrow -->
+      <p class="inline-flex items-center gap-2 text-sm font-body font-medium text-sky uppercase tracking-widest mb-4">
+        <span class="w-8 h-px bg-sky inline-block"></span>
+        Court-Admissible Co-Parenting Communication
+        <span class="w-8 h-px bg-sky inline-block"></span>
+      </p>
+
+      <!-- H1 -->
+      <h1 class="font-display font-bold text-4xl md:text-5xl lg:text-6xl text-navy leading-tight mb-6">
+        Your messages are evidence.<br />
+        <span class="text-sky">Treat them that way.</span>
+      </h1>
+
+      <!-- Subheadline -->
+      <p class="font-body text-lg text-[color:var(--color-text-muted)] max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed">
+        Liaison.legal gives you a secure, timestamped record of every co-parenting
+        communication — automatically hashed, permanently logged, and ready for court.
+        <strong class="text-navy">Free for parents, forever.</strong>
+      </p>
+
+      <!-- CTA -->
+      <a
+        href="https://app.liaison.legal/signup"
+        class="inline-flex items-center px-8 py-4 rounded-full bg-navy text-white font-body font-semibold text-lg hover:bg-navy-mid transition-colors duration-200 shadow-lg mb-8"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Start Free Account
+        <span class="ml-2" aria-hidden="true">→</span>
+      </a>
+
+      <!-- Trust badges -->
+      <div class="flex flex-wrap justify-center lg:justify-start gap-4 mt-2">
+        {[
+          { icon: '✓', text: 'Free forever for parents' },
+          { icon: '🔒', text: 'SHA-256 message hashing' },
+          { icon: '✓', text: 'No credit card required' },
+        ].map(({ icon, text }) => (
+          <span class="inline-flex items-center gap-1.5 text-sm font-body text-[color:var(--color-text-muted)] bg-sage-light px-3 py-1.5 rounded-full">
+            <span class="text-check font-bold">{icon}</span>
+            {text}
+          </span>
+        ))}
+      </div>
+    </div>
+
+    <!-- Phone mockup — hidden on mobile -->
+    <div class="hidden md:flex flex-shrink-0 justify-center lg:justify-end" aria-hidden="true">
+      <div
+        class="relative w-[280px] rounded-[2.5rem] bg-navy p-3"
+        style="box-shadow: var(--shadow-phone);"
+      >
+        <!-- Screen -->
+        <div class="bg-white rounded-[2rem] overflow-hidden">
+
+          <!-- App header -->
+          <div class="bg-navy px-4 py-3 flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-sky flex items-center justify-center text-white text-xs font-bold font-body flex-shrink-0">
+              JM
+            </div>
+            <div class="flex-1 min-w-0">
+              <p class="text-white text-xs font-body font-semibold truncate">Case #2024-1847</p>
+              <p class="text-white/60 text-[10px] font-body">Jordan Mercer</p>
+            </div>
+            <span class="text-[10px] font-body font-bold bg-check text-white px-2 py-0.5 rounded-full flex-shrink-0">
+              VERIFIED
+            </span>
+          </div>
+
+          <!-- Messages -->
+          <div class="px-3 py-4 space-y-3 bg-sky-light/30">
+
+            <!-- Received message -->
+            <div class="max-w-[85%]">
+              <div class="bg-white rounded-2xl rounded-tl-sm px-3 py-2 shadow-sm">
+                <p class="text-[11px] font-body text-navy leading-snug">
+                  I need to pick up Emma at 5pm. The order says 4pm.
+                </p>
+              </div>
+              <p class="text-[9px] font-body text-[color:var(--color-text-muted)] mt-0.5 ml-1">
+                ✓ Read 9:14 AM
+              </p>
+            </div>
+
+            <!-- Sent message -->
+            <div class="max-w-[85%] ml-auto">
+              <div class="bg-sky rounded-2xl rounded-tr-sm px-3 py-2">
+                <p class="text-[11px] font-body text-white leading-snug">
+                  The court order clearly states 4:00 PM at the school entrance.
+                </p>
+              </div>
+              <p class="text-[9px] font-body text-[color:var(--color-text-muted)] mt-0.5 text-right mr-1">
+                Sent 9:16 AM
+              </p>
+            </div>
+
+            <!-- Received message 2 -->
+            <div class="max-w-[85%]">
+              <div class="bg-white rounded-2xl rounded-tl-sm px-3 py-2 shadow-sm">
+                <p class="text-[11px] font-body text-navy leading-snug">
+                  I won't be able to make it by 4. Traffic.
+                </p>
+              </div>
+              <p class="text-[9px] font-body text-[color:var(--color-text-muted)] mt-0.5 ml-1">
+                ✓ Read 9:17 AM
+              </p>
+            </div>
+
+            <!-- Sent message 2 -->
+            <div class="max-w-[85%] ml-auto">
+              <div class="bg-sky rounded-2xl rounded-tr-sm px-3 py-2">
+                <p class="text-[11px] font-body text-white leading-snug">
+                  This message is being recorded per our court order.
+                </p>
+              </div>
+              <p class="text-[9px] font-body text-[color:var(--color-text-muted)] mt-0.5 text-right mr-1">
+                Sent 9:18 AM
+              </p>
+            </div>
+          </div>
+
+          <!-- Hash strip -->
+          <div class="bg-navy-mid px-3 py-2 flex items-center gap-2">
+            <div class="w-4 h-4 rounded bg-check flex items-center justify-center flex-shrink-0">
+              <span class="text-white text-[8px]">✓</span>
+            </div>
+            <p class="text-[9px] font-body text-white/70 truncate">
+              SHA-256: a3f9e2c1… · Immutable ledger
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

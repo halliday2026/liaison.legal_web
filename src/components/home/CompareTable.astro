@@ -1,0 +1,81 @@
+---
+const rows = [
+  { feature: 'Secure messaging',                          liaison: true,         tp: true,           ofw: true },
+  { feature: 'Read receipts & open timestamps',           liaison: true,         tp: true,           ofw: true },
+  { feature: 'Cryptographic message hashing (SHA-256)',   liaison: true,         tp: false,          ofw: false },
+  { feature: 'Immutable audit chain (prev-hash linking)', liaison: true,         tp: false,          ofw: false },
+  { feature: 'Document storage',                         liaison: true,         tp: true,           ofw: true },
+  { feature: 'Attorney access to evidence ledger',        liaison: true,         tp: 'Paid upgrade', ofw: 'Paid upgrade' },
+  { feature: 'AI forensic audit against court order',     liaison: 'Via attorney', tp: false,        ofw: false },
+  { feature: 'Zero-knowledge encryption',                 liaison: true,         tp: false,          ofw: false },
+  { feature: 'Monthly cost to parents',                   liaison: 'FREE',       tp: '$8.99–$14.99/mo', ofw: '$10.99–$16.99/mo' },
+];
+
+function renderCell(val: boolean | string) {
+  if (val === true) return '✓';
+  if (val === false) return '—';
+  return val;
+}
+---
+
+<section class="bg-warm-white py-20 px-6">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-12">
+      <p class="text-sm font-body font-medium text-sky uppercase tracking-widest mb-3">
+        How we compare
+      </p>
+      <h2 class="font-display font-bold text-3xl md:text-4xl text-navy">
+        Not all co-parenting apps are equal
+      </h2>
+    </div>
+
+    <!-- Scrollable wrapper for mobile -->
+    <div class="overflow-x-auto rounded-[var(--radius-lg)]" style="box-shadow: var(--shadow-card);">
+      <table class="w-full min-w-[640px] border-collapse">
+        <thead>
+          <tr>
+            <th class="bg-cream text-left px-6 py-4 font-body font-medium text-[color:var(--color-text-muted)] text-sm w-1/2">
+              Feature
+            </th>
+            <!-- Liaison.legal column header -->
+            <th class="bg-navy px-6 py-4 text-center w-[18%]">
+              <div class="flex flex-col items-center gap-1">
+                <span class="font-display font-bold text-white text-sm">Liaison.legal</span>
+                <span class="text-[10px] font-body font-bold bg-gold text-navy px-2 py-0.5 rounded-full">
+                  FREE
+                </span>
+              </div>
+            </th>
+            <th class="bg-cream border-l border-cream px-6 py-4 text-center font-body font-medium text-[color:var(--color-text-muted)] text-sm w-[16%]">
+              TalkingParents
+            </th>
+            <th class="bg-cream border-l border-cream px-6 py-4 text-center font-body font-medium text-[color:var(--color-text-muted)] text-sm w-[16%]">
+              OurFamilyWizard
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map(({ feature, liaison, tp, ofw }, i) => (
+            <tr class={i % 2 === 0 ? 'bg-white' : 'bg-cream/40'}>
+              <td class="px-6 py-3.5 font-body text-sm text-navy">{feature}</td>
+              <td class="bg-navy/5 border-l-2 border-navy px-6 py-3.5 text-center font-body text-sm font-semibold text-navy">
+                {renderCell(liaison)}
+              </td>
+              <td class="px-6 py-3.5 text-center font-body text-sm text-[color:var(--color-text-muted)]">
+                {renderCell(tp)}
+              </td>
+              <td class="px-6 py-3.5 text-center font-body text-sm text-[color:var(--color-text-muted)]">
+                {renderCell(ofw)}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <p class="mt-4 text-xs font-body text-[color:var(--color-text-muted)] text-center max-w-2xl mx-auto">
+      Pricing and features based on publicly available information. Always verify current pricing
+      directly with each provider.
+    </p>
+  </div>
+</section>

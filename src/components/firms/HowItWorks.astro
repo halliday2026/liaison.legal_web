@@ -1,0 +1,69 @@
+---
+const steps = [
+  {
+    number: '01',
+    title: 'Client uses Liaison.legal',
+    description:
+      'Your client downloads Liaison.legal — free forever for parents. Every message is automatically hashed and logged from their first conversation.',
+  },
+  {
+    number: '02',
+    title: 'Firm activates the case',
+    description:
+      'When you take the case, activate attorney access for $99. You get instant access to the full verified evidence ledger — no back-and-forth with your client.',
+  },
+  {
+    number: '03',
+    title: 'AI audits against the court order',
+    description:
+      'Upload the existing court order. The AI forensic auditor cross-references every message against it and flags potential deviations for attorney review.',
+  },
+  {
+    number: '04',
+    title: 'Attorney reviews and files',
+    description:
+      'Review AI-flagged items, run your legal analysis, and export a court-formatted PDF with one click. All source messages are included.',
+  },
+];
+---
+
+<section class="bg-cream py-20 px-6">
+  <div class="max-w-6xl mx-auto">
+
+    <div class="text-center mb-12">
+      <p class="text-sm font-body font-medium text-sky uppercase tracking-widest mb-3">
+        Simple workflow
+      </p>
+      <h2 class="font-display font-bold text-3xl md:text-4xl text-navy">
+        How it works
+      </h2>
+    </div>
+
+    <!-- Steps: horizontal on desktop, vertical on mobile -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-4 relative">
+
+      {steps.map(({ number, title, description }, i) => (
+        <div class="flex flex-col items-center text-center lg:items-start lg:text-left">
+          <!-- Number circle -->
+          <div class="w-14 h-14 rounded-full bg-navy flex items-center justify-center mb-4 flex-shrink-0">
+            <span class="font-display font-bold text-gold text-lg">{number}</span>
+          </div>
+
+          <!-- Connector line (desktop only, not on last item) -->
+          {i < steps.length - 1 && (
+            <div class="hidden lg:block absolute top-7 h-0.5 bg-navy/20"
+              style={`left: calc(${(i + 1) * 25}% - 1rem); width: calc(25% - 2rem);`}
+            />
+          )}
+
+          <h3 class="font-display font-semibold text-lg text-navy mb-2">{title}</h3>
+          <p class="font-body text-sm text-[color:var(--color-text-muted)] leading-relaxed">
+            {description}
+          </p>
+        </div>
+      ))}
+
+    </div>
+
+  </div>
+</section>

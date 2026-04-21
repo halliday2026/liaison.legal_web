@@ -1,0 +1,112 @@
+---
+const gridCapabilities = [
+  {
+    icon: '🔥',
+    title: 'Conflict Heatmap',
+    description:
+      'Visual timeline showing communication frequency and tone escalation. Instantly identify the periods of highest conflict for focused review.',
+  },
+  {
+    icon: '📄',
+    title: 'One-Click Court Export',
+    description:
+      'Generate a formatted PDF or CSV with all messages, timestamps, read receipts, and hash proofs — ready to attach to a motion.',
+  },
+  {
+    icon: '🏢',
+    title: 'White-Label Client Portal',
+    description:
+      'Offer Liaison.legal under your firm\'s branding. Your clients see your firm name, your logo — fully white-labeled.',
+  },
+  {
+    icon: '📊',
+    title: 'Multi-Case Management',
+    description:
+      'Manage evidence ledgers across all your active cases from a single dashboard. No separate logins, no context switching.',
+  },
+];
+---
+
+<section class="bg-warm-white py-20 px-6">
+  <div class="max-w-6xl mx-auto">
+
+    <div class="text-center mb-12">
+      <p class="text-sm font-body font-medium text-sky uppercase tracking-widest mb-3">
+        Attorney-side tools
+      </p>
+      <h2 class="font-display font-bold text-3xl md:text-4xl text-navy">
+        Built for how family law actually works
+      </h2>
+    </div>
+
+    <!-- Featured: AI Forensic Auditor -->
+    <div class="bg-navy rounded-[var(--radius-lg)] p-8 md:p-10 mb-6" style="box-shadow: var(--shadow-card);">
+      <div class="flex flex-col md:flex-row gap-8">
+        <div class="flex-shrink-0">
+          <div class="w-16 h-16 rounded-[var(--radius-md)] bg-gold/20 flex items-center justify-center text-3xl">
+            🤖
+          </div>
+        </div>
+        <div class="flex-1">
+          <div class="flex items-center gap-3 mb-3">
+            <h3 class="font-display font-bold text-2xl text-white">AI Forensic Auditor</h3>
+            <span class="text-xs font-body font-semibold bg-gold text-navy px-2 py-1 rounded-full">
+              Featured
+            </span>
+          </div>
+          <p class="font-body leading-relaxed mb-4" style="color: var(--color-text-light);">
+            Upload the existing parenting plan or court order. The AI cross-references every message
+            in the ledger against the order's specific provisions — pickup times, communication
+            protocols, restriction clauses — and surfaces each potential deviation with the exact
+            source message and timestamp.
+          </p>
+          <ul class="space-y-2">
+            {[
+              'Flags potential violations with source message citations',
+              'Every finding is grounded in raw message data — no hallucinations',
+              '"Potential Deviation" framing keeps findings within UPL guardrails',
+              'Attorney reviews and applies legal judgment — AI identifies, you decide',
+            ].map((point) => (
+              <li class="flex items-start gap-2">
+                <span class="text-gold font-bold mt-0.5 flex-shrink-0">→</span>
+                <span class="font-body text-sm" style="color: var(--color-text-light);">{point}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2x2 grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+      {gridCapabilities.map(({ icon, title, description }) => (
+        <div class="bg-white rounded-[var(--radius-lg)] p-6" style="box-shadow: var(--shadow-card);">
+          <div class="w-12 h-12 rounded-[var(--radius-md)] bg-sky-light flex items-center justify-center text-2xl mb-4">
+            {icon}
+          </div>
+          <h3 class="font-display font-semibold text-lg text-navy mb-2">{title}</h3>
+          <p class="font-body text-sm text-[color:var(--color-text-muted)] leading-relaxed">
+            {description}
+          </p>
+        </div>
+      ))}
+    </div>
+
+    <!-- UPL disclaimer -->
+    <div class="rounded-[var(--radius-lg)] border-2 border-gold bg-gold-light p-6">
+      <div class="flex items-start gap-3">
+        <span class="text-gold text-xl flex-shrink-0 mt-0.5">⚖️</span>
+        <div>
+          <h4 class="font-display font-semibold text-navy mb-2">Designed with UPL compliance in mind</h4>
+          <p class="font-body text-sm text-navy/80 leading-relaxed">
+            The AI identifies potential deviations — it does not provide legal advice. Every flagged
+            item is presented as a "Potential Deviation" for attorney review. All findings are 100%
+            source-grounded to raw messages. You apply the legal judgment; the AI handles the
+            evidence organization.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,72 @@
+---
+const features = [
+  {
+    icon: '🔗',
+    title: 'Immutable message ledger',
+    description:
+      'Every message is cryptographically hashed with SHA-256 and chained to the previous record. No edits. No deletions. Ever.',
+  },
+  {
+    icon: '👁️',
+    title: 'Read & open confirmation',
+    description:
+      'Exact timestamps when messages are received and read — eliminating "I never saw that" as a defense in court.',
+  },
+  {
+    icon: '🔒',
+    title: 'End-to-end encrypted',
+    description:
+      'Zero-knowledge architecture means only you and your co-parent can read messages. Not even Liaison.legal has access.',
+  },
+  {
+    icon: '📋',
+    title: 'Complete communication history',
+    description:
+      'Chronological, searchable, cryptographically verified record of every message exchanged — ready for court at any time.',
+  },
+  {
+    icon: '📁',
+    title: 'Document storage',
+    description:
+      'Upload and securely store court orders, parenting plans, school records, and any other case-relevant documents.',
+  },
+  {
+    icon: '⚖️',
+    title: 'Attorney-ready from day one',
+    description:
+      'Your attorney gets direct access to the verified evidence ledger — no time spent organizing screenshots or printouts.',
+  },
+];
+---
+
+<section class="bg-cream py-20 px-6">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-12">
+      <p class="text-sm font-body font-medium text-sky uppercase tracking-widest mb-3">
+        Built for court, used every day
+      </p>
+      <h2 class="font-display font-bold text-3xl md:text-4xl text-navy">
+        Everything you need to protect yourself
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {features.map(({ icon, title, description }) => (
+        <div
+          class="bg-white rounded-[var(--radius-lg)] p-6 flex flex-col gap-4"
+          style="box-shadow: var(--shadow-card);"
+        >
+          <div class="w-12 h-12 rounded-[var(--radius-md)] bg-sky-light flex items-center justify-center text-2xl">
+            {icon}
+          </div>
+          <div>
+            <h3 class="font-display font-semibold text-lg text-navy mb-2">{title}</h3>
+            <p class="font-body text-sm text-[color:var(--color-text-muted)] leading-relaxed">
+              {description}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

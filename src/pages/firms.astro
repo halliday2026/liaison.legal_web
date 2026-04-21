@@ -1,0 +1,27 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/layout/Nav.astro';
+import Footer from '../components/layout/Footer.astro';
+import FirmsHero from '../components/firms/FirmsHero.astro';
+import ProblemSolution from '../components/firms/ProblemSolution.astro';
+import HowItWorks from '../components/firms/HowItWorks.astro';
+import Capabilities from '../components/firms/Capabilities.astro';
+import Pricing from '../components/firms/Pricing.astro';
+import DemoForm from '../components/firms/DemoForm.astro';
+---
+
+<BaseLayout
+  title="Liaison.legal for Law Firms — AI Forensic Auditor for Family Law"
+  description="Your clients may already be documenting. Give your firm attorney-side access to a verified evidence ledger, AI deviation analysis, and one-click court exports."
+>
+  <Nav variant="dark" />
+  <main>
+    <FirmsHero />
+    <ProblemSolution />
+    <HowItWorks />
+    <Capabilities />
+    <Pricing />
+    <DemoForm />
+  </main>
+  <Footer />
+</BaseLayout>

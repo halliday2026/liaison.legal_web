@@ -1,0 +1,48 @@
+/* src/styles/tokens.css */
+:root {
+  /* Core palette */
+  --color-navy:        #0D1B2A;
+  --color-navy-mid:    #1A2E42;
+  --color-steel:       #2C4A6E;
+  --color-sky:         #4A90C4;
+  --color-sky-light:   #D6EAF8;
+  --color-sage:        #4A7C6F;
+  --color-sage-light:  #D5EAE6;
+  --color-warm-white:  #F8F6F2;
+  --color-cream:       #F2EEE8;
+  --color-gold:        #C9A84C;
+  --color-gold-light:  #FEF7E7;
+  --color-check:       #2E7D5A;
+  --color-danger:      #C0432B;
+
+  /* Text */
+  --color-text-primary:   #0D1B2A;
+  --color-text-muted:     #6B7B8D;
+  --color-text-light:     rgba(255, 255, 255, 0.65);
+
+  /* Typography */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body:    'DM Sans', system-ui, sans-serif;
+
+  /* Spacing scale */
+  --space-xs:  0.25rem;
+  --space-sm:  0.5rem;
+  --space-md:  1rem;
+  --space-lg:  2rem;
+  --space-xl:  4rem;
+  --space-2xl: 6rem;
+
+  /* Border radius */
+  --radius-sm:   6px;
+  --radius-md:   8px;
+  --radius-lg:   14px;
+  --radius-xl:   20px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-card:  0 2px 20px rgba(13, 27, 42, 0.07);
+  --shadow-phone: 0 40px 80px rgba(13, 27, 42, 0.25), 0 10px 20px rgba(13, 27, 42, 0.1);
+
+  /* Transitions */
+  --transition-base: 0.2s ease;
+}
