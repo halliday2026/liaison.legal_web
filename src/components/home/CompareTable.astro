@@ -1,14 +1,14 @@
 ---
 const rows = [
-  { feature: 'Secure messaging',                          liaison: true,         tp: true,           ofw: true },
-  { feature: 'Read receipts & open timestamps',           liaison: true,         tp: true,           ofw: true },
-  { feature: 'Cryptographic message hashing (SHA-256)',   liaison: true,         tp: false,          ofw: false },
-  { feature: 'Immutable audit chain (prev-hash linking)', liaison: true,         tp: false,          ofw: false },
-  { feature: 'Document storage',                         liaison: true,         tp: true,           ofw: true },
-  { feature: 'Attorney access to evidence ledger',        liaison: true,         tp: 'Paid upgrade', ofw: 'Paid upgrade' },
-  { feature: 'AI forensic audit against court order',     liaison: 'Via attorney', tp: false,        ofw: false },
-  { feature: 'Zero-knowledge encryption',                 liaison: true,         tp: false,          ofw: false },
-  { feature: 'Monthly cost to parents',                   liaison: 'FREE',       tp: '$8.99–$14.99/mo', ofw: '$10.99–$16.99/mo' },
+  { feature: 'Secure messaging',                          liaison: true,           tp: true,              ofw: true,              ac: true },
+  { feature: 'Read receipts & open timestamps',           liaison: true,           tp: true,              ofw: true,              ac: true },
+  { feature: 'Cryptographic message hashing (SHA-256)',   liaison: true,           tp: false,             ofw: false,             ac: false },
+  { feature: 'Immutable audit chain (prev-hash linking)', liaison: true,           tp: false,             ofw: false,             ac: false },
+  { feature: 'Document storage',                         liaison: true,           tp: true,              ofw: true,              ac: true },
+  { feature: 'Attorney access to evidence ledger',        liaison: true,           tp: 'Paid upgrade',    ofw: 'Paid upgrade',    ac: 'Paid upgrade' },
+  { feature: 'AI forensic audit against court order',     liaison: 'Via attorney', tp: false,             ofw: false,             ac: false },
+  { feature: 'Zero-knowledge encryption',                 liaison: true,           tp: false,             ofw: false,             ac: false },
+  { feature: 'Monthly cost to parents',                   liaison: 'FREE',         tp: '$8.99–$14.99/mo', ofw: '$10.99–$16.99/mo', ac: '$8.99/mo' },
 ];
 
 function renderCell(val: boolean | string) {
@@ -31,14 +31,14 @@ function renderCell(val: boolean | string) {
 
     <!-- Scrollable wrapper for mobile -->
     <div class="overflow-x-auto rounded-[var(--radius-lg)]" style="box-shadow: var(--shadow-card);">
-      <table class="w-full min-w-[640px] border-collapse">
+      <table class="w-full min-w-[780px] border-collapse">
         <thead>
           <tr>
-            <th class="bg-cream text-left px-6 py-4 font-body font-medium text-[color:var(--color-text-muted)] text-sm w-1/2">
+            <th class="bg-cream text-left px-6 py-4 font-body font-medium text-[color:var(--color-text-muted)] text-sm w-[40%]">
               Feature
             </th>
             <!-- Liaison.legal column header -->
-            <th class="bg-navy px-6 py-4 text-center w-[18%]">
+            <th class="bg-navy px-6 py-4 text-center w-[15%]">
               <div class="flex flex-col items-center gap-1">
                 <span class="font-display font-bold text-white text-sm">Liaison.legal</span>
                 <span class="text-[10px] font-body font-bold bg-gold text-navy px-2 py-0.5 rounded-full">
@@ -46,16 +46,19 @@ function renderCell(val: boolean | string) {
                 </span>
               </div>
             </th>
-            <th class="bg-cream border-l border-cream px-6 py-4 text-center font-body font-medium text-[color:var(--color-text-muted)] text-sm w-[16%]">
+            <th class="bg-cream border-l border-cream px-6 py-4 text-center font-body font-medium text-[color:var(--color-text-muted)] text-sm w-[15%]">
               TalkingParents
             </th>
-            <th class="bg-cream border-l border-cream px-6 py-4 text-center font-body font-medium text-[color:var(--color-text-muted)] text-sm w-[16%]">
+            <th class="bg-cream border-l border-cream px-6 py-4 text-center font-body font-medium text-[color:var(--color-text-muted)] text-sm w-[15%]">
               OurFamilyWizard
+            </th>
+            <th class="bg-cream border-l border-cream px-6 py-4 text-center font-body font-medium text-[color:var(--color-text-muted)] text-sm w-[15%]">
+              AppClose
             </th>
           </tr>
         </thead>
         <tbody>
-          {rows.map(({ feature, liaison, tp, ofw }, i) => (
+          {rows.map(({ feature, liaison, tp, ofw, ac }, i) => (
             <tr class={i % 2 === 0 ? 'bg-white' : 'bg-cream/40'}>
               <td class="px-6 py-3.5 font-body text-sm text-navy">{feature}</td>
               <td class="bg-navy/5 border-l-2 border-navy px-6 py-3.5 text-center font-body text-sm font-semibold text-navy">
@@ -66,6 +69,9 @@ function renderCell(val: boolean | string) {
               </td>
               <td class="px-6 py-3.5 text-center font-body text-sm text-[color:var(--color-text-muted)]">
                 {renderCell(ofw)}
+              </td>
+              <td class="px-6 py-3.5 text-center font-body text-sm text-[color:var(--color-text-muted)]">
+                {renderCell(ac)}
               </td>
             </tr>
           ))}

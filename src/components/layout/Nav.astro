@@ -13,10 +13,13 @@ const isLight = variant === 'light';
   <div class="max-w-6xl mx-auto flex items-center justify-between gap-4">
     <!-- Logo -->
     <a
-      href={isLight ? '/' : '/'}
-      class={`font-display font-bold text-xl tracking-tight ${isLight ? 'text-navy' : 'text-white'}`}
+      href="/"
+      class="inline-flex items-center gap-2"
     >
-      Liaison<span class={isLight ? 'text-sky' : 'text-gold'}>.legal</span>
+      <img src="/logo-icon.svg" alt="" class="h-10 w-auto" aria-hidden="true" />
+      <span class={`font-display font-bold text-xl tracking-tight ${isLight ? 'text-navy' : 'text-white'}`}>
+        Liaison<span class={isLight ? 'text-sky' : 'text-gold'}>.legal</span>
+      </span>
     </a>
 
     <!-- Center / secondary link -->
