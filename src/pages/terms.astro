@@ -1,0 +1,26 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/layout/Nav.astro';
+import Footer from '../components/layout/Footer.astro';
+---
+
+<BaseLayout
+  title="Terms of Service | Liaison.legal"
+  description="Liaison.legal Terms of Service"
+  noindex={true}
+>
+  <Nav />
+  <main>
+    <section class="bg-white py-20 px-6">
+      <div class="max-w-3xl mx-auto">
+        <h1 class="font-display font-bold text-4xl text-navy mb-6">Terms of Service</h1>
+        <p class="font-body text-base text-slate leading-relaxed">
+          This document is being finalized ahead of launch. Please check back soon.
+          Questions can be directed to
+          <a href="mailto:chris@liaison.legal" class="text-azure hover:underline">chris@liaison.legal</a>.
+        </p>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

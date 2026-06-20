@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+Disallow: /privacy
+Disallow: /terms
+
+# AI crawlers explicitly permitted
+User-agent: GPTBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+Sitemap: https://liaison.legal/sitemap.xml

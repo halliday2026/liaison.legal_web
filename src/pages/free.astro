@@ -1,0 +1,104 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/layout/Nav.astro';
+import Footer from '../components/layout/Footer.astro';
+import TrustStrip from '../components/ui/TrustStrip.astro';
+---
+
+<BaseLayout
+  title="The Free Promise — Why Liaison.legal Is Free for Parents, Forever"
+  description="Liaison.legal is free for parents with no payment screen anywhere in the app. Here's exactly what's free, why, and how we keep the lights on."
+>
+  <Nav />
+  <main>
+
+    <!-- Hero -->
+    <section class="bg-gray-100 py-20 px-6">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="font-display font-bold text-4xl md:text-5xl text-navy mb-6">
+          Free for parents. Forever. And we mean it structurally.
+        </h1>
+        <p class="font-body text-lg text-slate leading-relaxed">
+          Plenty of apps say "free." We built ours so that a parent literally cannot be charged —
+          there is no parent payment screen anywhere in Liaison.legal.
+        </p>
+      </div>
+    </section>
+
+    <!-- Answer-first -->
+    <section class="bg-white py-10 px-6 border-b border-gray-200">
+      <div class="max-w-3xl mx-auto">
+        <p class="font-body text-base text-slate leading-relaxed">
+          Liaison.legal is free for parents, permanently and unconditionally. There is no parent
+          payment rail in the product, no premium parent tier, and no credit card required to use
+          any parent feature. You can document your co-parenting communication for as long as you
+          like — whether or not you ever hire an attorney. Liaison.legal earns revenue from law
+          firms, not from parents.
+        </p>
+      </div>
+    </section>
+
+    <!-- Sections -->
+    <section class="bg-white py-20 px-6">
+      <div class="max-w-3xl mx-auto space-y-16">
+
+        <div>
+          <h2 class="font-display font-bold text-2xl md:text-3xl text-navy mb-4">
+            What "free" actually covers
+          </h2>
+          <p class="font-body text-base text-slate leading-relaxed">
+            Everything a parent uses: secure messaging, the tamper-evident ledger, read and open
+            receipts, complete searchable history, document storage, and the verified record itself.
+            All of it. No usage caps designed to push you into paying.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-display font-bold text-2xl md:text-3xl text-navy mb-4">
+            Why we can promise this
+          </h2>
+          <p class="font-body text-base text-slate leading-relaxed mb-4">
+            Documenting your communication should never depend on what you can afford — it's the
+            part that protects you. So parents don't pay. Law firms do, when they're pulled into
+            an active matter and use the record as part of their work. The parent who's simply
+            keeping an honest record is never the customer.
+          </p>
+          <p class="font-body text-sm text-gray-400 italic">
+            "Free for parents" means documentation is free. It does not mean litigation is free —
+            courts, attorneys, and filings have their own costs, set by them, not by us.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-display font-bold text-2xl md:text-3xl text-navy mb-4">
+            No ads. No selling your data. Not ever.
+          </h2>
+          <p class="font-body text-base text-slate leading-relaxed">
+            Liaison.legal does not run ads, does not sell or share your data with advertisers,
+            and does not build a profile of you to monetize. In a record meant for court, that
+            isn't just a privacy preference — a monetized record invites attacks on its neutrality.
+            Neutrality is the whole point.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="bg-navy py-16 px-6">
+      <div class="max-w-xl mx-auto text-center">
+        <a
+          href="https://app.liaison.legal/signup"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center px-8 py-4 rounded-full bg-azure text-white font-body font-semibold text-lg hover:brightness-110 transition-all duration-200 mb-6"
+        >
+          Start Free Account →
+        </a>
+        <div class="text-white/70"><TrustStrip /></div>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+</BaseLayout>

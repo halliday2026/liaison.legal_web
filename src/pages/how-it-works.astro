@@ -1,0 +1,115 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/layout/Nav.astro';
+import Footer from '../components/layout/Footer.astro';
+import StandingLine from '../components/ui/StandingLine.astro';
+import TrustStrip from '../components/ui/TrustStrip.astro';
+
+const steps = [
+  {
+    number: '01',
+    h3: 'Sign up free and invite your co-parent',
+    body: 'Create an account in minutes. Invite your co-parent to join so both sides are documented — or use solo mode and start building your record even if they refuse. Two-sided use is stronger (it captures read receipts on both ends), and we\'ll show you how to get the app written into your parenting plan.',
+  },
+  {
+    number: '02',
+    h3: 'Message like you always do',
+    body: 'Schedules, pick-ups, expenses, the hard conversations. Everything stays in one place instead of scattered across texts, email, and three different apps.',
+  },
+  {
+    number: '03',
+    h3: 'The record builds itself',
+    body: 'Every message is stamped with the time it was sent, hashed with SHA-256, and chained to the message before it — so the history is tamper-evident. When your co-parent reads a message, that time is captured too. You don\'t manage any of this. It just happens.',
+  },
+  {
+    number: '04',
+    h3: 'A record that\'s ready to work',
+    body: 'If your matter reaches a lawyer, they don\'t start from a shoebox of screenshots. Your attorney gets direct, view-only access to the verified record. When the matter calls for it, Liaison.legal\'s AI Forensic Auditor cross-references your communication history against the uploaded court order, flags potential deviations, and links every finding to the exact message behind it. An attorney reviews and confirms every finding before it goes anywhere.',
+    note: 'This analysis is for attorneys — it is never shown to parents.',
+  },
+];
+---
+
+<BaseLayout
+  title="How Liaison.legal Works — From First Message to Court-Ready Record"
+  description="See how Liaison.legal turns everyday co-parenting messages into a secure, timestamped, tamper-evident record — and what happens when an attorney gets involved."
+>
+  <Nav />
+  <main>
+
+    <!-- Hero -->
+    <section class="bg-gray-100 py-20 px-6">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="font-display font-bold text-4xl md:text-5xl text-navy mb-6">
+          From your first message to a record that holds up.
+        </h1>
+        <p class="font-body text-lg text-slate leading-relaxed">
+          Liaison.legal works quietly in the background. You communicate; it documents.
+          Here's exactly what happens at each step.
+        </p>
+      </div>
+    </section>
+
+    <!-- Answer-first paragraph -->
+    <section class="bg-white py-10 px-6 border-b border-gray-200">
+      <div class="max-w-3xl mx-auto">
+        <p class="font-body text-base text-slate leading-relaxed">
+          Liaison.legal works in four steps. (1) You create a free account and invite your
+          co-parent — or start documenting on your own if they won't join. (2) You message
+          through the app as you normally would. (3) Every message is timestamped, hashed,
+          chained, and marked with read and open times automatically. (4) If a matter goes
+          to an attorney, the lawyer reviews the verified record directly and, when needed,
+          runs a forensic audit against the court order. Parents never pay at any step.
+        </p>
+      </div>
+    </section>
+
+    <!-- Steps -->
+    <section class="bg-white py-20 px-6">
+      <div class="max-w-4xl mx-auto">
+        <div class="space-y-12">
+          {steps.map(({ number, h3, body, note }) => (
+            <div class="flex flex-col md:flex-row gap-6 md:gap-10">
+              <div class="flex-shrink-0">
+                <div class="w-14 h-14 rounded-full bg-navy flex items-center justify-center">
+                  <span class="font-display font-bold text-azure text-lg">{number}</span>
+                </div>
+              </div>
+              <div class="flex-1 pt-2">
+                <h3 class="font-display font-semibold text-xl text-navy mb-3">{h3}</h3>
+                <p class="font-body text-base text-slate leading-relaxed">{body}</p>
+                {note && (
+                  <p class="mt-3 text-sm font-body text-gray-400 italic">({note})</p>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div class="mt-12">
+          <StandingLine />
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="bg-gray-100 py-16 px-6">
+      <div class="max-w-xl mx-auto text-center">
+        <h2 class="font-display font-bold text-2xl text-navy mb-6">
+          Start your record today.
+        </h2>
+        <a
+          href="https://app.liaison.legal/signup"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center px-8 py-4 rounded-full bg-azure text-white font-body font-semibold text-lg hover:brightness-110 transition-all duration-200 mb-6"
+        >
+          Start Free Account →
+        </a>
+        <div><TrustStrip /></div>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+</BaseLayout>

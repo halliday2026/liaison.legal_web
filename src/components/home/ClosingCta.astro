@@ -1,0 +1,30 @@
+---
+import TrustStrip from '../ui/TrustStrip.astro';
+---
+<section class="bg-white py-20 px-6 border-t border-gray-200">
+  <div class="max-w-3xl mx-auto text-center">
+    <h2 class="font-display font-bold text-3xl md:text-4xl text-navy mb-4">
+      Your record starts with your next message.
+    </h2>
+    <p class="font-body text-lg text-slate mb-8">
+      Free forever for parents. No credit card. No catch.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+      <a
+        href="https://app.liaison.legal/signup"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center justify-center px-8 py-4 rounded-full bg-azure text-white font-body font-semibold text-lg hover:brightness-110 transition-all duration-200"
+      >
+        Start Free Account →
+      </a>
+    </div>
+    <p class="font-body text-sm text-gray-400 mb-6">
+      Already have an account?
+      <a href="https://app.liaison.legal" target="_blank" rel="noopener noreferrer" class="text-azure hover:underline">
+        Sign in
+      </a>
+    </p>
+    <TrustStrip />
+  </div>
+</section>

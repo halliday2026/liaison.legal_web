@@ -3,21 +3,45 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Nav from '../components/layout/Nav.astro';
 import Footer from '../components/layout/Footer.astro';
 import Hero from '../components/home/Hero.astro';
+import AnswerFirst from '../components/home/AnswerFirst.astro';
+import WhyItMatters from '../components/home/WhyItMatters.astro';
 import Features from '../components/home/Features.astro';
-import CompareTable from '../components/home/CompareTable.astro';
-import CtaBanner from '../components/home/CtaBanner.astro';
+import Differentiator from '../components/home/Differentiator.astro';
+import FreePromiseTeaser from '../components/home/FreePromiseTeaser.astro';
+import ClosingCta from '../components/home/ClosingCta.astro';
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'Liaison.legal',
+    applicationCategory: 'LifestyleApplication',
+    operatingSystem: 'Web, PWA',
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'USD',
+      description: 'Free for parents, forever.',
+    },
+    url: 'https://liaison.legal',
+  },
+];
 ---
 
 <BaseLayout
-  title="Liaison.legal — Court-Admissible Co-Parenting Communication, Free for Parents"
-  description="Secure, timestamped co-parenting messaging with SHA-256 hashing and read receipts. Court-admissible by design. Free forever for parents."
+  title="Free Co-Parenting Communication, Built for Court | Liaison.legal"
+  description="Liaison.legal is a free co-parenting communication app that creates secure, timestamped, tamper-evident records of every message — ready for your attorney and the court. Free forever for parents."
+  jsonLd={jsonLd}
 >
-  <Nav variant="light" />
+  <Nav />
   <main>
     <Hero />
+    <AnswerFirst />
+    <WhyItMatters />
     <Features />
-    <CompareTable />
-    <CtaBanner />
+    <Differentiator />
+    <FreePromiseTeaser />
+    <ClosingCta />
   </main>
   <Footer />
 </BaseLayout>
