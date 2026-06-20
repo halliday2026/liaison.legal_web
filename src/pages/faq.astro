@@ -1,0 +1,120 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/layout/Nav.astro';
+import Footer from '../components/layout/Footer.astro';
+import TrustStrip from '../components/ui/TrustStrip.astro';
+
+const faqs = [
+  {
+    q: 'Is there a free co-parenting communication app?',
+    a: 'Yes. Liaison.legal is free for parents, permanently — there is no parent payment screen anywhere in the app and no credit card is required. Documenting your co-parenting communication is free for as long as you need it, whether or not you ever hire an attorney.',
+  },
+  {
+    q: 'Is Liaison.legal really free, or is it a free trial?',
+    a: "It's free, not a trial. There is no parent payment rail in the product and no premium parent tier. Liaison.legal earns revenue from law firms when they're pulled into an active matter — never from parents.",
+  },
+  {
+    q: 'Are co-parenting app messages usable in court?',
+    a: 'Liaison.legal is designed to preserve clear, timestamped, tamper-evident records suitable for legal use. Whether any specific record is admitted depends on the court, jurisdiction, and circumstances. Records are exportable so your attorney can use them in your matter.',
+  },
+  {
+    q: 'What makes a co-parenting record "tamper-evident"?',
+    a: 'Each message is hashed with SHA-256 and chained to the message before it. If a past message were altered or deleted, the chain would break and the change would be detectable — which is what lets a court trust that the record wasn\'t changed after the fact.',
+  },
+  {
+    q: 'Do both parents have to use the app?',
+    a: 'No. Two-sided use is stronger because it captures read and open receipts on both ends, but Liaison.legal has a solo mode that lets you build your own documented record even if your co-parent refuses to join.',
+  },
+  {
+    q: 'Can my attorney access my record?',
+    a: 'Yes. If you hire an attorney, they can get direct, view-only access to your verified record — no screenshots or reassembly required. Access is limited to your own attorney and the parties to your matter.',
+  },
+  {
+    q: 'What is the AI Forensic Auditor?',
+    a: "It's a tool for attorneys. When an attorney activates it on a matter, it cross-references the communication record against the uploaded court order and flags potential deviations, linking each one to the supporting message. It's reviewed and confirmed by an attorney before use, and it's never shown to parents.",
+  },
+  {
+    q: 'How is Liaison.legal different from TalkingParents, OurFamilyWizard, or AppClose?',
+    a: "Those apps store and timestamp co-parenting messages, which Liaison.legal does too. The difference is what happens after: Liaison.legal is free for parents, and it adds an attorney-side forensic audit that compares the record against the court order itself — not just a place to keep messages.",
+  },
+  {
+    q: 'Is my data sold or used for ads?',
+    a: 'No. Liaison.legal does not sell or share your data with advertisers and does not run ads. A record meant for court has to stay neutral, so monetizing it is off the table entirely.',
+  },
+  {
+    q: 'Is Liaison.legal a law firm or a substitute for a lawyer?',
+    a: 'No. Liaison.legal is a record-keeping tool. It does not provide legal advice and is not a substitute for an attorney, a protective order, or — in an emergency — calling 911.',
+  },
+  {
+    q: 'What does it cost a law firm?',
+    a: 'Firms get free view-only access to a client\'s record. Costs apply only when a firm activates the forensic audit and produces a court-ready Declaration on a matter. See For Law Firms for details.',
+  },
+];
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map(({ q, a }) => ({
+    '@type': 'Question',
+    name: q,
+    acceptedAnswer: { '@type': 'Answer', text: a },
+  })),
+};
+---
+
+<BaseLayout
+  title="Liaison.legal FAQ — Free Co-Parenting Communication, Answered"
+  description="Answers to common questions about Liaison.legal: is it really free, are messages court-ready, do both parents need to join, how records are protected, and more."
+  jsonLd={faqJsonLd}
+>
+  <Nav />
+  <main>
+
+    <!-- Hero -->
+    <section class="bg-gray-100 py-20 px-6">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="font-display font-bold text-4xl md:text-5xl text-navy mb-4">
+          Frequently asked questions
+        </h1>
+        <p class="font-body text-lg text-slate">
+          Straight answers about what Liaison.legal does, what it costs, and how it protects your record.
+        </p>
+      </div>
+    </section>
+
+    <!-- Q&As -->
+    <section class="bg-white py-20 px-6">
+      <div class="max-w-3xl mx-auto space-y-10">
+        {faqs.map(({ q, a }) => (
+          <div class="border-b border-gray-200 pb-10 last:border-0 last:pb-0">
+            <h2 class="font-display font-semibold text-xl text-navy mb-3">{q}</h2>
+            <p class="font-body text-base text-slate leading-relaxed">{a}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="bg-gray-100 py-16 px-6">
+      <div class="max-w-xl mx-auto text-center">
+        <p class="font-body text-base text-slate mb-6">
+          Still have a question?
+          <a href="mailto:chris@liaison.legal" class="text-azure hover:underline ml-1">Contact us →</a>
+          <span class="mx-2 text-gray-400">·</span>
+          Ready to start?
+        </p>
+        <a
+          href="https://app.liaison.legal/signup"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center px-8 py-4 rounded-full bg-azure text-white font-body font-semibold text-lg hover:brightness-110 transition-all duration-200 mb-6"
+        >
+          Start Free Account →
+        </a>
+        <div><TrustStrip /></div>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+</BaseLayout>

@@ -1,0 +1,133 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Nav from '../../components/layout/Nav.astro';
+import Footer from '../../components/layout/Footer.astro';
+import TrustStrip from '../../components/ui/TrustStrip.astro';
+
+const articleJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'Free Co-Parenting Communication Records: What They Are and How to Keep One',
+  description: 'A plain guide to keeping a free, court-ready record of co-parenting communication — what makes a record hold up, why screenshots fail, and how to document for free.',
+  url: 'https://liaison.legal/resources/free-co-parenting-communication-records',
+  publisher: {
+    '@type': 'Organization',
+    name: 'Liaison.legal',
+    url: 'https://liaison.legal',
+  },
+};
+---
+
+<BaseLayout
+  title="Free Co-Parenting Communication Records: What They Are and How to Keep One"
+  description="A plain guide to keeping a free, court-ready record of co-parenting communication — what makes a record hold up, why screenshots fail, and how to document for free."
+  jsonLd={articleJsonLd}
+>
+  <Nav />
+  <main>
+
+    <section class="bg-gray-100 py-20 px-6">
+      <div class="max-w-3xl mx-auto">
+        <h1 class="font-display font-bold text-4xl md:text-5xl text-navy mb-8">
+          Free co-parenting communication records, explained
+        </h1>
+
+        <!-- Answer-first summary -->
+        <p class="font-body text-base text-slate leading-relaxed p-6 bg-white rounded-[var(--radius-lg)] border-l-4 border-azure">
+          A co-parenting communication record is a preserved, timestamped history of the messages
+          between separated or divorced parents. To hold up in a custody matter, a record needs to
+          be tamper-evident (provably unchanged), timestamped, and exportable. Screenshots of
+          regular texts usually fail this test because they can be edited or selectively cropped.
+          Free options exist — Liaison.legal keeps a tamper-evident, timestamped record for parents
+          at no cost, with no payment screen anywhere in the app.
+        </p>
+      </div>
+    </section>
+
+    <section class="bg-white py-20 px-6">
+      <div class="max-w-3xl mx-auto space-y-16">
+
+        <div>
+          <h2 class="font-display font-bold text-2xl md:text-3xl text-navy mb-4">
+            Why screenshots don't hold up
+          </h2>
+          <p class="font-body text-base text-slate leading-relaxed">
+            A screenshot proves almost nothing on its own. It can be cropped, staged, or edited,
+            and it carries no independent proof of when a message was sent or whether it was read.
+            Courts know this, which is why a self-collected screenshot invites a credibility fight
+            instead of ending one.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-display font-bold text-2xl md:text-3xl text-navy mb-4">
+            What makes a record court-ready
+          </h2>
+          <p class="font-body text-base text-slate leading-relaxed">
+            Three properties matter: <strong class="text-navy">tamper-evidence</strong> (the record
+            can be shown not to have changed), <strong class="text-navy">reliable timestamps</strong>
+            (sent and read times captured by the system, not the user), and <strong class="text-navy">clean export</strong>
+            (the record comes out in an organized, verifiable form an attorney can file). Whether
+            any specific record is admitted still depends on the court, jurisdiction, and
+            circumstances — but a record with these properties gives you something to stand on.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-display font-bold text-2xl md:text-3xl text-navy mb-4">
+            Do you have to pay to keep a good record?
+          </h2>
+          <p class="font-body text-base text-slate leading-relaxed">
+            No. Documenting your communication is the part that protects you, and it shouldn't
+            depend on what you can afford. Liaison.legal is free for parents, permanently — there
+            is no parent payment rail in the product. You can keep a tamper-evident, timestamped
+            record for as long as you need it, whether or not you ever hire an attorney.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-display font-bold text-2xl md:text-3xl text-navy mb-6">
+            How to start keeping a free record today
+          </h2>
+          <ol class="space-y-4">
+            {[
+              'Create a free Liaison.legal account.',
+              'Invite your co-parent — or start in solo mode if they won\'t join.',
+              'Move your co-parenting communication into the app.',
+              'Let the record build itself: every message timestamped, hashed, and chained automatically.',
+              'If you hire an attorney, they can review the verified record directly.',
+            ].map((step, i) => (
+              <li class="flex items-start gap-4">
+                <span class="w-7 h-7 rounded-full bg-navy flex items-center justify-center text-white text-xs font-bold font-body flex-shrink-0 mt-0.5">
+                  {i + 1}
+                </span>
+                <p class="font-body text-base text-slate leading-relaxed">{step}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="bg-navy py-16 px-6">
+      <div class="max-w-xl mx-auto text-center">
+        <h2 class="font-display font-bold text-2xl text-white mb-6">
+          Start your free record →
+        </h2>
+        <a
+          href="https://app.liaison.legal/signup"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center px-8 py-4 rounded-full bg-azure text-white font-body font-semibold text-lg hover:brightness-110 transition-all duration-200 mb-6"
+        >
+          Start Free Account →
+        </a>
+        <div class="text-white/70"><TrustStrip /></div>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+</BaseLayout>

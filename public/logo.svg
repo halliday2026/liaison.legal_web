@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="145.62486mm"
+   height="117.27533mm"
+   viewBox="0 0 145.62486 117.27533"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   sodipodi:docname="Liaison_Logo.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showguides="true"
+     inkscape:zoom="0.71891835"
+     inkscape:cx="283.75962"
+     inkscape:cy="260.80848"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-29.897916,-79.375)">
+    <g
+       id="g6-2"
+       transform="matrix(0.23292391,0,0,0.26458333,20.929248,-89.444898)">
+      <path
+         d="m 38.564266,874.94548 c 6.835575,-242.28872 119.052244,-227.5316 284.957294,-227.5316 136.71807,0 232.48435,67.47959 233.49602,193.5316 1.30617,162.74612 -74.31984,187.67782 -200.88383,205.53162 -46.85282,2 -108.74391,7.6976 -154.06058,6.166 -36.62161,18.3024 -78.25214,36.3024 -148.915407,25.3024 33.027396,-22 39.756294,-22.9802 42.060532,-58.9802 C 52.973949,989.96531 37.408025,915.92874 38.564266,874.94548 Z"
+         fill="#013b84"
+         id="path1-4"
+         style="stroke-width:0.876402;shape-rendering:geometricPrecision"
+         sodipodi:nodetypes="sssccccs" />
+      <path
+         d="m 663.64796,874.94548 c -6.9269,-242.28872 -120.6832,-231.22549 -288.76394,-227.5316 -126.07605,2.77076 -235.59003,67.47959 -236.61523,193.5316 -1.3236,162.74612 139.04009,201.53162 203.56738,205.53162 47.47872,2 110.19659,7.6976 156.11863,6.166 37.11083,18.3024 79.29749,36.3024 150.90476,25.3024 -33.4686,-22 -40.2874,-22.9802 -42.6224,-58.9802 42.8086,-28.99999 58.5825,-103.03656 57.4108,-144.01982 z"
+         fill="#013b84"
+         id="path6-5"
+         style="fill:#5abbfc;fill-opacity:1;stroke-width:0.882236;shape-rendering:geometricPrecision"
+         sodipodi:nodetypes="sssccccs" />
+      <ellipse
+         cx="351.40396"
+         cy="848.36182"
+         rx="225.40025"
+         ry="210.30235"
+         fill="#0384da"
+         opacity="0.95"
+         id="ellipse2-4-5"
+         style="fill:#ffffff;stroke-width:1.0458;shape-rendering:geometricPrecision" />
+      <ellipse
+         cx="351.06073"
+         cy="848.07184"
+         rx="215.00992"
+         ry="201.99008"
+         fill="#0384da"
+         opacity="0.95"
+         id="ellipse2-1"
+         style="stroke-width:1.00103;shape-rendering:geometricPrecision" />
+      <circle
+         cx="340.13382"
+         cy="756.68652"
+         r="46"
+         fill="#ffffff"
+         id="circle3-7"
+         style="shape-rendering:geometricPrecision" />
+      <path
+         d="M 293.90459,1057.4779 V 890.91808 c 0,-49.42622 22,-76.47075 50,-76.47075 29,0 51,27.04453 51,76.47075 v 166.55982 c 0,3.7302 -7,4.6628 -14,2.7977 -20,-4.6629 -54,-4.6629 -74,0 -7,1.8651 -13,0.9325 -13,-2.7977 z m 0,-173.08781 c -14,10.25827 -28,28.90967 -34,54.08906 -5,20.51655 -14,34.5051 -24,34.5051 -10,0 -18,-17.71883 -18,-40.10052 0,-48.49364 48,-116.57126 126,-116.57126 78,0 126,68.07762 126,116.57126 0,22.38169 -8,40.10052 -18,40.10052 -10,0 -19,-13.98855 -24,-34.5051 -6,-25.17939 -20,-43.83079 -33,-54.08906 z"
+         fill="#ffffff"
+         id="path4-1"
+         style="stroke-width:0.965697;shape-rendering:geometricPrecision"
+         sodipodi:nodetypes="sssssccsccsssssccc" />
+    </g>
+  </g>
+</svg>

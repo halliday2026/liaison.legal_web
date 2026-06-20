@@ -1,28 +1,25 @@
-/* src/styles/tokens.css */
+/* src/styles/tokens.css — single source of truth for Liaison.legal brand */
 :root {
   /* Core palette */
-  --color-navy:        #0D1B2A;
-  --color-navy-mid:    #1A2E42;
-  --color-steel:       #2C4A6E;
-  --color-sky:         #4A90C4;
-  --color-sky-light:   #D6EAF8;
-  --color-sage:        #4A7C6F;
-  --color-sage-light:  #D5EAE6;
-  --color-warm-white:  #F8F6F2;
-  --color-cream:       #F2EEE8;
-  --color-gold:        #C9A84C;
-  --color-gold-light:  #FEF7E7;
-  --color-check:       #2E7D5A;
-  --color-danger:      #C0432B;
+  --navy:      #013B84;   /* primary brand, headings, dark sections, nav */
+  --azure:     #0384DA;   /* primary actions (buttons, links) */
+  --sky:       #5ABBFC;   /* accents, highlights, subtle fills */
+  --white:     #FFFFFF;
+  --slate:     #2D3748;   /* body copy — not pure navy, lighter for long text */
 
-  /* Text */
-  --color-text-primary:   #0D1B2A;
-  --color-text-muted:     #6B7B8D;
-  --color-text-light:     rgba(255, 255, 255, 0.65);
+  /* Neutral gray scale */
+  --gray-100:  #F7F8FA;
+  --gray-200:  #E8ECF0;
+  --gray-400:  #9AA5B4;
+  --gray-600:  #4A5568;
+
+  /* Semantic */
+  --danger:    #C0432B;
 
   /* Typography */
-  --font-display: 'Playfair Display', Georgia, serif;
-  --font-body:    'DM Sans', system-ui, sans-serif;
+  --font-display:  'Playfair Display', Georgia, serif;
+  --font-body:     'DM Sans', system-ui, sans-serif;
+  --font-wordmark: 'Poppins', sans-serif;
 
   /* Spacing scale */
   --space-xs:  0.25rem;
@@ -40,8 +37,8 @@
   --radius-full: 9999px;
 
   /* Shadows */
-  --shadow-card:  0 2px 20px rgba(13, 27, 42, 0.07);
-  --shadow-phone: 0 40px 80px rgba(13, 27, 42, 0.25), 0 10px 20px rgba(13, 27, 42, 0.1);
+  --shadow-card:  0 2px 20px rgba(1, 59, 132, 0.07);
+  --shadow-raise: 0 4px 24px rgba(1, 59, 132, 0.12);
 
   /* Transitions */
   --transition-base: 0.2s ease;

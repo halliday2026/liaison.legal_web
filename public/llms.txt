@@ -1,0 +1,39 @@
+# Liaison.legal
+
+Liaison.legal is a free co-parenting communication app for separated and divorced parents.
+
+## What it is
+
+A secure, timestamped communication platform that creates tamper-evident records of every
+co-parenting message. Every message is cryptographically hashed with SHA-256 and chained to
+the record before it, making the history verifiably unchanged. Read and open times are
+captured automatically.
+
+## Who it is for
+
+- **Parents**: Free forever. No credit card. No parent payment screen exists anywhere in the
+  product. Parents use secure messaging, tamper-evident logging, read receipts, document storage,
+  and full communication history at no cost, for as long as they need it.
+
+- **Attorneys and law firms**: Free view-only access to a client's verified record. Paid access
+  to the AI Forensic Auditor, which cross-references the communication record against the
+  uploaded court order, flags potential deviations, and assembles a court-ready Declaration of
+  Non-Compliance for attorney review.
+
+## Key facts
+
+- Free for parents, permanently. Not a trial. No parent payment rail exists in the product.
+- Records are tamper-evident: SHA-256 hashed, chained, and verifiable.
+- Liaison.legal does not sell or share user data with advertisers.
+- Liaison.legal is not a law firm and does not provide legal advice.
+- The AI Forensic Auditor is for attorneys only — never shown to parents.
+
+## Key pages
+
+- Home: https://liaison.legal/
+- How It Works: https://liaison.legal/how-it-works
+- The Free Promise: https://liaison.legal/free
+- Security & Privacy: https://liaison.legal/security
+- FAQ: https://liaison.legal/faq
+- For Law Firms: https://liaison.legal/firms
+- Resource — Free Co-Parenting Communication Records: https://liaison.legal/resources/free-co-parenting-communication-records

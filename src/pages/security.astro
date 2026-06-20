@@ -1,0 +1,129 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/layout/Nav.astro';
+import Footer from '../components/layout/Footer.astro';
+import StandingLine from '../components/ui/StandingLine.astro';
+import EmergencyBoundary from '../components/ui/EmergencyBoundary.astro';
+---
+
+<BaseLayout
+  title="Security & Privacy at Liaison.legal — In Plain English"
+  description="How Liaison.legal protects your co-parenting records: SHA-256 hashing, tamper-evident chaining, encryption in transit and at rest, and strict access controls. Explained plainly."
+>
+  <Nav />
+  <main>
+
+    <!-- Hero -->
+    <section class="bg-gray-100 py-20 px-6">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="font-display font-bold text-4xl md:text-5xl text-navy mb-6">
+          Security &amp; privacy, explained in plain English.
+        </h1>
+        <p class="font-body text-lg text-slate leading-relaxed">
+          Your co-parenting record may end up in front of a judge. Here's exactly how we protect
+          it — and what we will and won't say about it.
+        </p>
+      </div>
+    </section>
+
+    <!-- Answer-first -->
+    <section class="bg-white py-10 px-6 border-b border-gray-200">
+      <div class="max-w-3xl mx-auto">
+        <p class="font-body text-base text-slate leading-relaxed">
+          Liaison.legal protects co-parenting records with cryptographic hashing (SHA-256), a
+          tamper-evident hash chain linking each message to the one before it, encryption in
+          transit and at rest, and strict access controls over who can ever view a record.
+          Messages can't be quietly edited or deleted after they're sent. Attorneys get access
+          only to their own client's record, and only the parties to a matter and their authorized
+          professionals can see it.
+        </p>
+      </div>
+    </section>
+
+    <!-- Sections -->
+    <section class="bg-white py-20 px-6">
+      <div class="max-w-3xl mx-auto space-y-16">
+
+        <div>
+          <h2 class="font-display font-bold text-2xl md:text-3xl text-navy mb-4">
+            What "tamper-evident" means
+          </h2>
+          <p class="font-body text-base text-slate leading-relaxed mb-4">
+            Every message is run through SHA-256 — a one-way cryptographic fingerprint — and each
+            fingerprint is chained to the one before it. If anyone tried to alter or remove a past
+            message, the chain would break and the change would be detectable. That's what lets
+            your record answer the question every court asks: <em>can we trust that this wasn't
+            changed after the fact?</em>
+          </p>
+          <p class="font-body text-sm text-gray-400 italic">
+            (We say "tamper-evident," not "immutable," because it's the accurate word: the
+            integrity of the record is verifiable.)
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-display font-bold text-2xl md:text-3xl text-navy mb-4">
+            Who can see your messages
+          </h2>
+          <p class="font-body text-base text-slate leading-relaxed">
+            Messages are encrypted in transit and at rest. Access is tightly controlled: only the
+            parties to a matter and the professionals they authorize can view a record. Attorney
+            access is limited to that attorney's own client. We are honest about one thing many
+            apps gloss over — when an attorney activates the forensic audit on a matter, the
+            system processes the messages on that matter to perform the analysis. We don't pretend
+            a tool that reads the record can't read the record. What we promise is that access is
+            controlled, limited, logged, and never sold.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-display font-bold text-2xl md:text-3xl text-navy mb-4">
+            What we never do with your data
+          </h2>
+          <ul class="space-y-3 font-body text-base text-slate">
+            {[
+              'We never sell or share your data with advertisers.',
+              'We never run ads against your record.',
+              'We never show one parent the other parent\'s private notes or an attorney\'s work product.',
+              'We never surface the forensic audit or its findings to parents.',
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <span class="text-azure font-bold mt-0.5 flex-shrink-0">✓</span>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="font-display font-bold text-2xl md:text-3xl text-navy mb-4">
+            What Liaison.legal is not
+          </h2>
+          <p class="font-body text-base text-slate leading-relaxed mb-4">
+            Liaison.legal is a record-keeping tool. It is <strong>not</strong> a law firm and
+            does <strong>not</strong> provide legal advice. It is <strong>not</strong> an
+            emergency service — if you or your child are in immediate danger, call 911 or your
+            local emergency number. And it is <strong>not</strong> a substitute for a protective
+            order or other legal protection.
+          </p>
+          <StandingLine />
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="bg-gray-100 py-12 px-6">
+      <div class="max-w-3xl mx-auto text-center">
+        <p class="font-body text-base text-slate">
+          Have a specific question?
+          <a href="/faq" class="text-azure hover:underline ml-1">See the FAQ →</a>
+          <span class="mx-2 text-gray-400">·</span>
+          <a href="mailto:chris@liaison.legal" class="text-azure hover:underline">Contact us →</a>
+        </p>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+</BaseLayout>

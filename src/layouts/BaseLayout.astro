@@ -5,11 +5,34 @@ interface Props {
   title: string;
   description: string;
   ogImage?: string;
+  jsonLd?: object | object[];
+  noindex?: boolean;
 }
 
-const { title, description, ogImage } = Astro.props;
+const { title, description, ogImage, jsonLd, noindex = false } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-const ogImageURL = ogImage ?? '/og-default.png';
+const ogImageURL = new URL(ogImage ?? '/og-default.png', Astro.site);
+
+const sitewideJsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Liaison.legal',
+    url: 'https://liaison.legal',
+    logo: 'https://liaison.legal/logo.svg',
+    sameAs: ['https://www.linkedin.com/company/liaison.legal/'],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Liaison.legal',
+    url: 'https://liaison.legal',
+  },
+];
+
+const allJsonLd = jsonLd
+  ? [...sitewideJsonLd, ...(Array.isArray(jsonLd) ? jsonLd : [jsonLd])]
+  : sitewideJsonLd;
 ---
 
 <!doctype html>
@@ -21,6 +44,7 @@ const ogImageURL = ogImage ?? '/og-default.png';
 
     <title>{title}</title>
     <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
 
     <!-- Open Graph -->
     <meta property="og:title" content={title} />
@@ -28,6 +52,7 @@ const ogImageURL = ogImage ?? '/og-default.png';
     <meta property="og:image" content={ogImageURL} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalURL} />
+    <meta property="og:site_name" content="Liaison.legal" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -35,16 +60,23 @@ const ogImageURL = ogImage ?? '/og-default.png';
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImageURL} />
 
-    <!-- Favicon -->
+    <!-- Favicon & app icons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
 
-    <!-- Google Fonts -->
+    <!-- Google Fonts: Playfair Display + DM Sans + Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=DM+Sans:wght@300;400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=DM+Sans:wght@300;400;500&family=Poppins:wght@500&display=swap"
       rel="stylesheet"
     />
+
+    <!-- JSON-LD structured data -->
+    <script type="application/ld+json" set:html={JSON.stringify(allJsonLd)} />
   </head>
   <body>
     <slot />
