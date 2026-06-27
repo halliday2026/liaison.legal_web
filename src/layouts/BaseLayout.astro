@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import WaitlistModal from '../components/ui/WaitlistModal.astro';
 
 interface Props {
   title: string;
@@ -80,5 +81,6 @@ const allJsonLd = jsonLd
   </head>
   <body>
     <slot />
+    <WaitlistModal />
   </body>
 </html>
